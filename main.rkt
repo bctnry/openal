@@ -10,7 +10,11 @@
     [(unix)
      (ffi-lib "libopenal")]
     [(macosx)
-     (ffi-lib "OpenAL.framework/OpenAL")]))
+     (ffi-lib "OpenAL.framework/OpenAL")]
+    [(windows)
+     (ffi-lib "OpenAL32.dll")]))
+     ; the original binding does not support windows so I fixed it for my project.
+     ; the OpenAL32.dll file need to be put under the same directory as this file.
 
 (define-syntax-rule (define-ffi-definer define-openal define-openal* openal)
   (begin
