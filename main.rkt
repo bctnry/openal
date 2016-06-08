@@ -12,7 +12,7 @@
     [(macosx)
      (ffi-lib "OpenAL.framework/OpenAL")]
     [(windows)
-     (ffi-lib "OpenAL32.dll")]))
+     (ffi-lib "OpenAL32")]))
      ; the original binding does not support windows so I fixed it for my project.
      ; the OpenAL32.dll file need to be put under the same directory as this file.
 
